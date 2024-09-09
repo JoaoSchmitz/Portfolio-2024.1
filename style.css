@@ -1,0 +1,395 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  text-decoration: none;
+}
+
+h2 {
+  color: #00d9ff;
+  padding-left: 1vw;
+}
+
+:root {
+  --main-color: #00d9ff;
+  --text-color: #748896;
+  --text-color2: #d1d1d1;
+  --bg-color: #666464;
+  --bg-color2: #008080;
+  --big-font: 5rem;
+  --big-font2: 3rem;
+  --h2-font: 2rem;
+  --p-font: 0.9rem;
+}
+
+*::selection{
+  background: teal;
+  color: #000000;
+}
+
+body {
+  color: var(--text-color2);
+  background: var(--bg-color);
+}
+
+body::-webkit-scrollbar {
+  width: 15px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--text-color);        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid var(--text-color);  /* creates padding around scroll thumb */
+}
+
+header { 
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 250px;
+  background: var(--bg-color);
+}
+
+.logo {
+  color: var(--main-color);
+  font-weight: 600;
+  font-size: var(--h2-font);
+  font-weight: 600;
+
+  text-decoration: underline;
+  text-decoration-color: var(--bg-color);
+  text-decoration-thickness: 1px;
+  text-decoration-style: double;
+
+  display: flex;
+  align-items: center;
+  transition: .4s;
+}
+.logo:hover {
+  text-decoration-color: var(--main-color);
+  transform: translateX(-10px);
+  text-shadow: 2px 2px teal;
+}
+
+.navbar {
+  display: flex;
+  list-style: none;
+}
+.navbar a {
+  color: var(--text-color2);
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  padding: 10px 20px;
+  padding-left: 0px;
+  padding-right: 3vw;
+  transition: .4s;
+}
+.navbar a:hover {
+  color: var(--main-color);
+  text-shadow: 2px 2px teal;
+}
+
+#menu-icon {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+.horizontal-line {
+  height: 1px;
+  width: -webkit-fill-available;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  background: #3efedd;
+  color: #3efedd;
+  border-radius: 30px;
+}
+
+section {
+  padding: 5vh 16vw;
+}
+
+.home {
+  padding-top: 25vh;
+  display: grid;
+}
+
+.before-name {
+  color: var(--text-color2);
+  font-size: var(--h2-font);
+  width: 100%;
+  margin-left: 15%;
+}
+
+.name {
+  color: var(--main-color);
+  font-size: var(--big-font);
+  margin-left: 20%;
+}
+
+.after-name {
+  color: var(--text-color);
+  font-size: var(--big-font2);
+  margin: 10px 0;
+  margin-left: 30%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: 90vh;
+  height: auto;
+}
+
+.content-text {
+  list-style: circle;
+  list-style-position: inside;
+  padding-left: 3vw;
+  text-align: center;
+}
+
+.about-content {
+  margin-top: 10%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img img {
+  max-width: 478px;
+  max-height: auto;
+  width: auto;
+  height: auto;
+  border: 5px double var(--main-color);
+  border-style: groove;
+  border-radius: 20px;
+  margin-right: 0px;
+}
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.box {
+  text-align: center;
+  width: 21vw;
+  padding: 3rem;
+  background: var(--bg-color2);
+  border-radius: .5rem;
+  box-shadow: 0px 0px 8px 0px rgb(255, 255, 255);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.about,
+.skills,
+.projects,
+.contact {
+  margin-top: 5%;
+}
+
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.project-item {
+  background: var(--bg-color2);
+  width: 40vw;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  box-shadow: 0px 0px 8px 0px rgb(255, 255, 255);
+
+  text-align: center;
+  width: 21vw;
+  border-radius: .5rem;
+  display: flex;
+  flex-flow: column;
+}
+
+.project-title {
+  font-size: 2rem;
+  margin-top: 3vh;
+}
+
+.project-desc {
+  padding: 20px 0px;
+}
+
+.project-desc-item {
+  font-size: 1.1rem;
+  list-style: circle;
+  text-align: center;
+}
+
+.project-tecs {
+  list-style: disc;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+
+  width: 80%;
+  margin-top: 4vh;
+  margin-bottom: 3vh;
+  padding: 0;
+  gap: 2rem;
+
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--bg-color);
+}
+
+.project-link, .project-link-disabled {
+  color: var(--text-color2);
+  padding: 20px;
+  display: block;
+  text-transform: capitalize;
+  transition: .4s;
+}
+
+.project-link:hover {
+  color: var(--main-color);
+  transform: translateX(-12px);
+}
+
+.repo {
+  line-height: 30px;
+  font-size: 20px;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer {
+  padding: 10px 0;
+}
+.col {
+  width: 25%;
+}
+.col a {
+  color: var(--text-color2);
+  font-size: 1.2rem;
+  display: block;
+  text-transform: capitalize;
+  transition: .4s;
+}
+.col a:hover {
+  color: var(--main-color);
+  transform: translateX(-12px);
+}
+
+.link-box {
+  color: #8793ae;
+  margin: 70% 0;
+}
+
+
+/* 
+  Sistema Solar
+=================
+*/
+
+.container {
+  font-size: 2px;
+  width: 40em;
+  height: 40em;
+  justify-self: center;
+  align-self: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.sun {
+  position: absolute;
+  top: 15em;
+  left: 15em;
+  width: 10em;
+  height: 10em;
+  background-color: rgb(255, 243, 139);
+  border-radius: 50%;
+  box-shadow: 0 0 3em white;
+}
+
+.earth,.moon {
+  position: absolute;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+  border-width: 0.1em 0.1em 0 0;
+  border-radius: 50%;
+}
+
+.earth {
+  top: 5em;
+  left: 5em;
+  width: 30em;
+  height: 30em;
+  animation: orbit 16.5s linear infinite;
+}
+
+.moon {
+  top: .5em;
+  right: .5em;
+  width: 8em;
+  height: 8em;
+  animation: orbit 2.7s linear infinite;
+}
+
+.earth::before,.moon::before {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+}
+
+.earth::before {
+  top: 2.8em;
+  right: 2.8em;
+  width: 3em;
+  height: 3em;
+  background-color: aqua;
+}
+
+.moon::before {
+  top: 0.8em;
+  right: 0.2em;
+  width: 1.2em;
+  height: 1.2em;
+  background-color: silver;
+}
+
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
